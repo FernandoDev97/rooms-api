@@ -1,7 +1,7 @@
 version: '3'
 
 services: 
-  api-gym-pass-style-pg:
+  api-rest-express:
     image: bitnami/postgresql:latest
     ports: 
       - 5432:5432
