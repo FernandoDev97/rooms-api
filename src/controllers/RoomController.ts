@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { tuple, z } from 'zod'
+import { z } from 'zod'
 import { roomRepository } from '../repositories/roomRepository'
 import { videoRepository } from '../repositories/videoRepository'
 import { subjectRepository } from '../repositories/subjectRepository'
