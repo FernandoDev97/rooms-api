@@ -10,16 +10,11 @@ export class SubjectController {
 
     const { name } = createSubjectBodySchema.parse(req.body)
 
-    try {
-      const newSubject = subjectRepository.create({
-        name,
-      })
+    const newSubject = subjectRepository.create({
+      name,
+    })
 
-      await subjectRepository.save(newSubject)
-    } catch (error) {
-      console.log(error)
-      res.status(500).json({ message: 'Internal server error.' })
-    }
+    await subjectRepository.save(newSubject)
 
     return res.status(201).json()
   }
